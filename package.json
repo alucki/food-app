@@ -10,9 +10,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
-    },
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -47,7 +48,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
+      "pre-push": "npm test -- --watchAll=false"
     }
   }
 }

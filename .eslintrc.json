@@ -3,5 +3,11 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"]
+  },
+  "globals": {
+    "document": true
+  },
+  "env": {
+    "jest/globals": true
   }
 }

@@ -4,6 +4,10 @@ This includes:
 
 - create-react-app (removing non-essential files)
 - linting with eslint (airbnb config) and prettier
+- styled components
+- style linting for styled-components with stylelint
+- pre commit hook that runs linting and style linting
+- pre push hook that runs tests
 
 In the project directory, you can run:
 

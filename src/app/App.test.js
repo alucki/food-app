@@ -2,9 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  expect(1 + 1).toEqual(2);
-  // const { getByText } = render(<App />);
-  // const linkElement = getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+test('renders title', () => {
+  const { getByText } = render(<App />);
+  const title = getByText(/Base React Project/i);
+  expect(title).toBeInTheDocument();
 });

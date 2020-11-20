@@ -1,12 +1,12 @@
 import React from 'react';
-import { Hello } from '../components/hello/hello';
+import './app.css';
+import { Header } from '../components/header';
 
 function App() {
   return (
-    <div>
-      Base React Project
-      <Hello />
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 

@@ -1,4 +1,19 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const lineAnim = keyframes`
+  to {
+    stroke-dashoffset: 0;
+  }
+`;
+
+const fillLogo = keyframes`
+  from {
+    fill: white;
+  }
+  to {
+    fill: black;
+  }
+`;
 
 export const SvgWrapper = styled.div`
   position: absolute;
@@ -46,20 +61,5 @@ export const SvgWrapper = styled.div`
     stroke-dasharray: 321.5423583984375;
     stroke-dashoffset: 321.5423583984375;
     animation: ${lineAnim} 2s ease forwards 1.8s;
-  }
-`;
-
-const lineAnim = keyframes`
-  to {
-    stroke-dashoffset: 0;
-  }
-`;
-
-const fillLogo = keyframes`
-  from {
-    fill: white;
-  }
-  to {
-    fill: black;
   }
 `;

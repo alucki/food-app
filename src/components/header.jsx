@@ -9,7 +9,7 @@ import {
 
 export const Header = () => (
   <HeaderContainer>
-    <HomeLink to="/">What should you eat?</HomeLink>
+    <HomeLink to="/">Let's eat!</HomeLink>
     <LinksContainer>
       <StyledUl>
         <li>

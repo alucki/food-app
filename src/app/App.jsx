@@ -5,24 +5,24 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from 'react-router-dom';
+import Homepage from '../components/pages/homepage';
 
 function App() {
   return (
     <Router>
       <Header />
-      {/* <Switch>
-        <Route path="/area">
+      <Switch>
+        {/* <Route path="/area">
           <Area />
-        </Route>
-        <Route path="/category">
+        </Route> */}
+        {/* <Route path="/category">
           <Category />
-        </Route>
+        </Route> */}
         <Route path="/">
-          <Home />
+          <Homepage />
         </Route>
-      </Switch> */}
+      </Switch>
     </Router>
   );
 }

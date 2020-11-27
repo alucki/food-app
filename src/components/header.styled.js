@@ -10,6 +10,7 @@ export const HeaderContainer = styled.div`
   padding: 32px;
   background: linear-gradient(rgba(246, 189, 96, 0.5), ${yellowRed});
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  font-family: 'Holtwood One SC', serif;
 `;
 
 export const LinksContainer = styled.nav`
@@ -38,7 +39,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const HomeLink = styled(NavLink)`
-  font-size: 24px;
+  font-size: 40px;
 
   &:focus {
     color: inherit;

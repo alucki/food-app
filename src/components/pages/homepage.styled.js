@@ -76,3 +76,37 @@ export const SvgWrapper = styled.div`
     stroke-linecap: round;
   }
 `;
+
+export const StyledFieldset = styled.fieldset`
+  border: none;
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+export const StyledSubmit = styled.input`
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  background: #84a59d;
+  border: none;
+  padding: 12px 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+`;
+
+export const StyledForm = styled.form`
+  width: 50%;
+`;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+`;

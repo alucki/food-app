@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { morningBlue, yellowRed } from '../colors/colors';
+import { morningBlue, yellowRed } from '../../colors/colors';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`

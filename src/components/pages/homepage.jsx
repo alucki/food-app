@@ -14,6 +14,7 @@ import Carousel from '../carousel/carousel';
 const Homepage = () => {
   const [ingredient, setIngredient] = useState('');
   const [mealData, setMealData] = useState(null);
+  const [notFoundMessage, setNotFoundMessage] = useState(false);
 
   const handleChange = (e) => {
     setIngredient(e.target.value);
@@ -26,15 +27,17 @@ const Homepage = () => {
         `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`,
       )
       .then((response) => {
-        setMealData(response);
+        setNotFoundMessage(false);
+        setMealData(response.data.meals);
+        if (!response?.data?.meals) setNotFoundMessage(true);
       })
       .catch((error) => {
         console.log('error', error);
       });
   };
 
-  const createMealSlides = (data) => {
-    return data?.data?.meals?.map((meal) => meal.strMealThumb);
+  const createMealSlides = (mealData) => {
+    return mealData?.map((meal) => meal.strMealThumb);
   };
 
   return (
@@ -59,7 +62,11 @@ const Homepage = () => {
           </StyledFieldset>
         </StyledForm>
       </FormWrapper>
+      {/* React.lazy causing flickering when input is changed after showing an image carousel */}
       {mealData && <Carousel slides={createMealSlides(mealData)} />}
+      {notFoundMessage && (
+        <div>Oops, no meals found for that ingredient!</div>
+      )}
     </>
   );
 };

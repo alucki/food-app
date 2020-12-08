@@ -18,7 +18,7 @@ const fillLogo = keyframes`
 export const SvgWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 64px;
+  margin-top: 48px;
 
   #logo {
     animation: ${fillLogo} 0.5s ease forwards 3s;
@@ -98,6 +98,7 @@ export const StyledSubmit = styled.input`
   padding: 12px 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  margin-bottom: 24px;
 `;
 
 export const StyledForm = styled.form`
@@ -108,5 +109,15 @@ export const FormWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 24px;
+`;
+
+export const HomepageWrapper = styled.div`
+  margin: 0 16px;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
 `;

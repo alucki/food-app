@@ -7,6 +7,8 @@ import {
   StyledForm,
   FormWrapper,
   StyledSubmit,
+  HomepageWrapper,
+  Text,
 } from './homepage.styled';
 import { HungrySvg } from './hungry';
 import Carousel from '../carousel/carousel';
@@ -41,7 +43,7 @@ const Homepage = () => {
   };
 
   return (
-    <>
+    <HomepageWrapper>
       <SvgWrapper>
         <HungrySvg />
       </SvgWrapper>
@@ -65,9 +67,9 @@ const Homepage = () => {
       {/* React.lazy causing flickering when input is changed after showing an image carousel */}
       {mealData && <Carousel slides={createMealSlides(mealData)} />}
       {notFoundMessage && (
-        <div>Oops, no meals found for that ingredient!</div>
+        <Text>Oops, no meals found for that ingredient!</Text>
       )}
-    </>
+    </HomepageWrapper>
   );
 };
 

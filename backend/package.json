@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-crud-app",
+  "version": "1.0.0",
+  "description": "Basic CRUD app with nodejs mongodb expressjs",
+  "main": "server.js",
+  "scripts": {
+    "prod": "node server",
+    "watch": "nodemon server --ignore public/",
+    "start": "npm run watch"
+  },
+  "author": "Anna Lucking",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

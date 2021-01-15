@@ -6,18 +6,15 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Homepage from '../components/pages/homepage';
+import Homepage from '../pages/homepage';
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        {/* <Route path="/area">
-          <Area />
-        </Route> */}
-        {/* <Route path="/category">
-          <Category />
+        {/* <Route path="/recipes">
+          <Recipes />
         </Route> */}
         <Route path="/">
           <Homepage />

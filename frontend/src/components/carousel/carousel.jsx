@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { SliderContainer } from './carousel.styled';
 import { SliderContent } from './sliderContent.styled';
 import { Slide } from './slide/slide';
-import { LeftArrow, RightArrow } from './arrow/arrow';
+import { LeftArrow, RightArrow } from '../icons/arrow/arrow';
 
 const Carousel = ({ slides }) => {
   const firstSlide = slides[0];

@@ -11,8 +11,8 @@ import {
   Column,
   Text,
 } from './homepage.styled';
-import { HungrySvg } from './hungry';
-import SlimTile from '../../components/slimTile/slimTile';
+import { HungrySvg } from '../svgs/hungry';
+import SlimTile from '../components/slimTile/slimTile';
 import { mockMealData } from './mockMealData';
 
 const Homepage = () => {

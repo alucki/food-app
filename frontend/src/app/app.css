@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 * {
   margin: 0;
@@ -10,8 +10,8 @@
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(#f7ede2, #f5cac3);
-  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(#f7ede2, white);
+  font-family: 'Crimson Text', serif;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;

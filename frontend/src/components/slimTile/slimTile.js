@@ -5,7 +5,7 @@ import {
   TileTitle,
   AddButtonWrapper,
 } from './slimTile.styles';
-import { Add } from '../icons/add';
+import { Add } from '../../icons/add';
 import axios from 'axios';
 
 const SlimTile = ({ image, title }) => {

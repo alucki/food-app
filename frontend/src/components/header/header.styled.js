@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { morningBlue, yellowRed } from '../../colors/colors';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
@@ -8,49 +7,51 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 24px 32px;
-  background: linear-gradient(rgba(246, 189, 96, 0.5), ${yellowRed});
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-  font-family: 'Holtwood One SC', serif;
 `;
 
-export const LinksContainer = styled.nav`
-  width: 35%;
-`;
+export const LinksContainer = styled.nav``;
 
 export const NavLink = styled(Link)`
   font-size: 20px;
   text-decoration: none;
+  color: black;
+  padding: 0 10px;
 
   &:visited {
-    color: inherit;
+    color: black;
   }
 
   &:focus {
-    color: ${morningBlue};
+    color: black;
   }
 
   &:hover {
-    color: ${morningBlue};
+    color: black;
   }
 
   &:active {
-    color: ${morningBlue};
+    color: black;
   }
 `;
 
 export const HomeLink = styled(NavLink)`
   font-size: 40px;
 
+  &:visited {
+    color: black;
+  }
+
   &:focus {
-    color: inherit;
+    color: black;
   }
 
   &:hover {
-    color: inherit;
+    color: black;
   }
 
   &:active {
-    color: inherit;
+    color: black;
   }
 `;
 

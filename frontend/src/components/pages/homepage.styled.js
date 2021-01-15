@@ -18,9 +18,9 @@ const fillLogo = keyframes`
 export const SvgWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 48px;
 
   #logo {
+    height: 100px;
     animation: ${fillLogo} 0.5s ease forwards 3s;
   }
 
@@ -102,7 +102,7 @@ export const StyledSubmit = styled.input`
 `;
 
 export const StyledForm = styled.form`
-  width: 50%;
+  width: 100%;
 `;
 
 export const FormWrapper = styled.div`
@@ -113,7 +113,9 @@ export const FormWrapper = styled.div`
 `;
 
 export const HomepageWrapper = styled.div`
-  margin: 0 16px;
+  margin: 48px 16px 0;
+  display: flex;
+  justify-content: space-around;
 `;
 
 export const Text = styled.div`
@@ -121,3 +123,5 @@ export const Text = styled.div`
   justify-content: center;
   font-size: 32px;
 `;
+
+export const Column = styled.div``;

@@ -8,10 +8,12 @@ import {
   FormWrapper,
   StyledSubmit,
   HomepageWrapper,
+  Column,
   Text,
 } from './homepage.styled';
 import { HungrySvg } from './hungry';
-import Carousel from '../carousel/carousel';
+import SlimTile from '../../components/slimTile/slimTile';
+import { mockMealData } from './mockMealData';
 
 const Homepage = () => {
   const [ingredient, setIngredient] = useState('');
@@ -44,31 +46,42 @@ const Homepage = () => {
 
   return (
     <HomepageWrapper>
-      <SvgWrapper>
-        <HungrySvg />
-      </SvgWrapper>
-      <FormWrapper>
-        <StyledForm onSubmit={handleSubmit}>
-          <StyledFieldset>
-            <label htmlFor="ingredient" />
-            <StyledInput
-              type="text"
-              name="ingredient"
-              placeholder="Search for a recipe by ingredient"
-              value={ingredient}
-              onChange={handleChange}
+      <Column>
+        <SvgWrapper>
+          <HungrySvg />
+        </SvgWrapper>
+        <FormWrapper>
+          <StyledForm onSubmit={handleSubmit}>
+            <StyledFieldset>
+              <label htmlFor="ingredient" />
+              <StyledInput
+                type="text"
+                name="ingredient"
+                placeholder="Search for a recipe by ingredient"
+                value={ingredient}
+                onChange={handleChange}
+              />
+              <br />
+              <br />
+              <StyledSubmit type="submit" value="Submit" />
+            </StyledFieldset>
+          </StyledForm>
+        </FormWrapper>
+      </Column>
+      <Column>
+        {mockMealData?.map((meal) => {
+          return (
+            <SlimTile
+              key={meal.idMeal}
+              title={meal.strMeal}
+              image={meal.strMealThumb}
             />
-            <br />
-            <br />
-            <StyledSubmit type="submit" value="Submit" />
-          </StyledFieldset>
-        </StyledForm>
-      </FormWrapper>
-      {/* React.lazy causing flickering when input is changed after showing an image carousel */}
-      {mealData && <Carousel slides={createMealSlides(mealData)} />}
-      {notFoundMessage && (
-        <Text>Oops, no meals found for that ingredient!</Text>
-      )}
+          );
+        })}
+        {notFoundMessage && (
+          <Text>Oops, no meals found for that ingredient!</Text>
+        )}
+      </Column>
     </HomepageWrapper>
   );
 };

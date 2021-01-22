@@ -10,10 +10,10 @@ import axios from 'axios';
 
 const SlimTile = ({ image, title }) => {
   const handleAddClick = () => {
-    axios.post(`http://localhost:3000/createPost`, {
+    axios.post(`http://localhost:3000/createRecipe`, {
       title: `${title}`,
-      desc: '',
-      author: 'Anna',
+      imageUrl: `${image}`,
+      notes: '',
     });
   };
 

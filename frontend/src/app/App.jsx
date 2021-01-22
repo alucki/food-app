@@ -7,15 +7,16 @@ import {
   Route,
 } from 'react-router-dom';
 import Homepage from '../pages/homepage';
+import RecipesPage from '../pages/recipesPage';
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        {/* <Route path="/recipes">
-          <Recipes />
-        </Route> */}
+        <Route path="/recipes">
+          <RecipesPage />
+        </Route>
         <Route path="/">
           <Homepage />
         </Route>

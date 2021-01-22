@@ -40,10 +40,6 @@ const Homepage = () => {
       });
   };
 
-  const createMealSlides = (mealData) => {
-    return mealData?.map((meal) => meal.strMealThumb);
-  };
-
   return (
     <HomepageWrapper>
       <Column>

@@ -15,7 +15,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 // require models here so they can be accessed throughout app
-require("./models/posts");
+require("./models/recipes");
 
 const app = require("./app");
 

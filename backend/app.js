@@ -1,7 +1,7 @@
 // project configurations
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./routes/postsRoutes");
+const routes = require("./routes/recipesRoutes");
 const cors = require("cors");
 const morgan = require("morgan");
 

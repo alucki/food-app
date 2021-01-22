@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TileWrapper = styled.div`
   width: 250px;
+  flex-wrap: wrap;
   border-radius: 5px;
   display: flex;
   background-color: white;
@@ -23,7 +24,7 @@ export const TileNotes = styled.p`
 `;
 
 export const TileTitle = styled.p`
-  min-height: 50px;
+  min-height: 35px;
   padding: 5px;
   width: 100%;
 `;

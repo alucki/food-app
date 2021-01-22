@@ -4,26 +4,40 @@ import Tile from '../components/tile/tile';
 import { RecipesPageWrapper } from './recipesPage.styled';
 
 const RecipesPage = () => {
-  const [recipes, setRecipes] = useState();
+  const [recipesList, setRecipesList] = useState();
 
   useEffect(() => {
     const getRecipes = async () => {
       const recipes = await axios.get(
         'http://localhost:3000/getRecipes',
       );
-      setRecipes(recipes.data);
+      setRecipesList(recipes.data);
     };
 
     getRecipes();
   }, []);
 
+  const handleEditClick = () => {};
+
+  const handleDeleteClick = (id) => {
+    axios.delete(`http://localhost:3000/recipe/${id}/delete`);
+
+    const newRecipesList = recipesList.filter(
+      (recipe) => recipe._id !== id,
+    );
+
+    setRecipesList(newRecipesList);
+  };
+
   return (
     <RecipesPageWrapper>
-      {recipes?.map((recipe) => (
+      {recipesList?.map((recipe) => (
         <Tile
           key={recipe._id}
           title={recipe.title}
           image={recipe.imageUrl}
+          editOnClick={handleEditClick}
+          deleteOnClick={() => handleDeleteClick(recipe._id)}
         />
       ))}
     </RecipesPageWrapper>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import {
   TileNotes,
@@ -18,7 +18,6 @@ import { Delete } from '../../icons/delete';
 
 const Tile = ({ image, title, notes, deleteOnClick, id }) => {
   const [showEditView, setShowEditView] = useState(false);
-  const notesInputRef = useRef();
   const [editedNote, setEditedNote] = useState(notes);
 
   const handleSaveClick = (id) => {
@@ -56,7 +55,6 @@ const Tile = ({ image, title, notes, deleteOnClick, id }) => {
         <EditNotesSection
           name="recipe-notes"
           rows="10"
-          ref={notesInputRef}
           value={editedNote}
           onChange={handleEditNoteOnChange}
         />

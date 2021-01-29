@@ -17,8 +17,6 @@ const RecipesPage = () => {
     getRecipes();
   }, []);
 
-  const handleEditClick = () => {};
-
   const handleDeleteClick = (id) => {
     axios.delete(`http://localhost:3000/recipe/${id}/delete`);
 
@@ -36,7 +34,8 @@ const RecipesPage = () => {
           key={recipe._id}
           title={recipe.title}
           image={recipe.imageUrl}
-          editOnClick={handleEditClick}
+          notes={recipe.notes}
+          id={recipe._id}
           deleteOnClick={() => handleDeleteClick(recipe._id)}
         />
       ))}

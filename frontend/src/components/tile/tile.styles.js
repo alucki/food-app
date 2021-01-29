@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const TileWrapper = styled.div`
+  display: ${({ showEditView }) => (showEditView ? 'none' : 'flex')};
   width: 250px;
   flex-wrap: wrap;
   border-radius: 5px;
-  display: flex;
   background-color: white;
   margin: 20px 0;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
@@ -19,12 +19,11 @@ export const TileImage = styled.img`
   border-radius: 5px 5px 0 0;
 `;
 
-export const TileNotes = styled.p`
-  min-height: 50px;
+export const TileNotes = styled.div`
+  margin-bottom: 30px;
 `;
 
 export const TileTitle = styled.p`
-  min-height: 35px;
   padding: 5px;
   width: 100%;
 `;
